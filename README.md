@@ -14,6 +14,7 @@ The frontend https://github.com/Valeriya2022/planets-project-front-react.git
 4) pm2 
 
 To run the project in your terminal run
-```npm install```, then
+```npm install```, then,
+add .env with your atlas MONGO_URL,
 ```npm start``` to run one instance or
 ```npm run cluster``` to run multiple instances of the application
