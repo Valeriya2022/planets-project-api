@@ -1,5 +1,6 @@
 const http = require('http');
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 const app = require('./app.js');
 
@@ -9,7 +10,7 @@ const server = http.createServer(app);
 
 const PORT = process.env.PORT || 8000;
 
-const MONGO_URL = "mongodb+srv://valeriya-api:61RW7dnUAh3pKbIV@cluster0.or2iuiz.mongodb.net/nasa-database?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', ()=>{
   console.log('MongoDB connection ready!')
