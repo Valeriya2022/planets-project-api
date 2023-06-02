@@ -29,3 +29,5 @@
    customer: [ String ]
 
  })
+
+ module.exports = mongoose.model('Launch', launchSchema);
