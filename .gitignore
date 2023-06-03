@@ -1,2 +1,8 @@
 /node_modules/
 /src/test.js
+/.idea/.gitignore
+/coverage/
+/.idea/vcs.xml
+/.idea/jsLibraryMappings.xml
+/.idea/modules.xml
+/.idea/server.iml

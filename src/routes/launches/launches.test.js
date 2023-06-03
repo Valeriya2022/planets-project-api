@@ -16,16 +16,16 @@ describe('Testing launches API', ()=>{
     await mongoDisconnect();
   })
 
-  describe('Test GET /launches',()=>{
+  describe('Test GET /v1/launches',()=>{
     test('It should respond with 200 success', async ()=>{
       await request(app)
-        .get('/launches')
+        .get('/v1/launches')
         .expect('Content-Type', /json/)
         .expect(200);
     })
   })
 
-  describe('Test POST /launches', ()=>{
+  describe('Test POST /v1/launches', ()=>{
     const launchDate = new Date('January 28, 2030');
     const data = {
       mission: 'USS Enterprice',
@@ -48,7 +48,7 @@ describe('Testing launches API', ()=>{
 
     test('It should respond with 201 created', async ()=>{
       const response = await request(app)
-        .post('/launches')
+        .post('/v1/launches')
         .send(data)
         .expect('Content-Type', /json/)
         .expect(201);
@@ -61,7 +61,7 @@ describe('Testing launches API', ()=>{
 
     test('It should catch missing required properties', async ()=>{
       const response = await request(app)
-        .post('/launches')
+        .post('/v1/launches')
         .send(dataWithoutDate)
         .expect(400);
       expect(response.body).toStrictEqual(
@@ -72,7 +72,7 @@ describe('Testing launches API', ()=>{
     })
     test('It should catch invalid dates', async ()=>{
       const response = await request(app)
-        .post('/launches')
+        .post('/v1/launches')
         .send(dataWithInvalidDate)
         .expect(400);
 
