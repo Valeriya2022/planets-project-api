@@ -2,6 +2,10 @@
 The api is designed to serve planets application
 The frontend https://github.com/Valeriya2022/planets-project-front-react.git
 
+The api is published to
+http://54.145.161.60:8000/v1/launches
+http://54.145.161.60:8000/v1/planets
+
 ## NodeJs ExpressJs application 
 ### The project follows MVC architecture
 ### Tests are written in jest, supertest
