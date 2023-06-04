@@ -1,12 +1,11 @@
 const http = require('http');
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const app = require('./app.js');
 const { loadPlanetsData } = require('../src/models/planets.model');
 const { mongoConnect } = require("./services/mongo");
 const { loadLaunchesData  } = require("./models/launches.model");
-
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
 
 const server = http.createServer(app);
 
