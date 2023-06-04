@@ -17,6 +17,9 @@
      type: String,
      required: true
    },
+   target: {
+     type: String,
+   },
    upcoming: {
      type: Boolean ,
      required: true
