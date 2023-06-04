@@ -12,6 +12,8 @@ The frontend https://github.com/Valeriya2022/planets-project-front-react.git
 2) csv-parse
 3) morgan
 4) pm2 
+5) helmet
+6) axios
 
 To run the project in your terminal run
 ```npm install```, then,

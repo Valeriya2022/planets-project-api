@@ -6,3 +6,6 @@
 /.idea/jsLibraryMappings.xml
 /.idea/modules.xml
 /.idea/server.iml
+/.env
+/jest.config.js
+
